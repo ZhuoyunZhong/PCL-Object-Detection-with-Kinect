@@ -6,9 +6,11 @@ Kinect 1.0, Ubuntu 16.04, ROS kinetic, PCL library
 
 
 
+
+
 ### Install:
 
-**//** For the use of kinect
+For the use of kinect
 
 > sudo apt-get install ros-<rosdistro>-openni-camera
 >
@@ -16,17 +18,23 @@ Kinect 1.0, Ubuntu 16.04, ROS kinetic, PCL library
 
 
 
+
+
 ### Launch & Use:
 
-
-
 > roslaunch openni_launch openni.launch depth_registration:=true
+
+
+
+
 
 If visualization needed
 
 > rviz
 
  
+
+
 
 Run object detection and acquire obstacles location
 
@@ -35,6 +43,8 @@ Run object detection and acquire obstacles location
 > rostopic echo /kinect_data/obstacles_location
 
  
+
+
 
 msg "LocationArray" definition: 
 
@@ -45,6 +55,8 @@ msg "LocationArray" definition:
 
  
 
+
+
 Visualization. 
 
 change source file "kinect_pcl.cpp" line 34 ---> visulization=true
@@ -54,6 +66,8 @@ then recompile it and run.
 load this topic in rviz `/kinect_data/obstacles_location`
 
 WARN visualization is TIME CONSUMING 
+
+
 
 
 
