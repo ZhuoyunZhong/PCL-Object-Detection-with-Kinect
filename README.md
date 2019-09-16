@@ -1,12 +1,12 @@
 ## PCL Object Detection Report
 
-#### Tested Device: 
+### Tested Device: 
 
 Kinect 1.0, Ubuntu 16.04, ROS kinetic, PCL library
 
 
 
-#### Install:
+### Install:
 
 **//** For the use of kinect
 
@@ -16,51 +16,48 @@ Kinect 1.0, Ubuntu 16.04, ROS kinetic, PCL library
 
 
 
-#### Launch & Use:
+### Launch & Use:
+
+
 
 > roslaunch openni_launch openni.launch depth_registration:=true
->
-> rviz // If visualization needed
+
+If visualization needed
+
+> rviz
 
  
 
-> // run object detection
->
+Run object detection and acquire obstacles location
+
 > rosrun kinect_data kinect_pcl.cpp
->
-> // acquire obstacles location
 >
 > rostopic echo /kinect_data/obstacles_location
 
  
 
-> /* msg "LocationArray" definition: 
->
+msg "LocationArray" definition: 
+
 > kinect_data::Location   x(x-dimension, smallest), y(DEPTH, smallest), width(x span), height(y span)
 >
-> int length(object numbers)  
+> int length(object numbers) 
 >
-> */
 
  
 
-> /* Visualization
->
-> change source file "kinect_pcl.cpp" line 34 ---> visulization=true
->
-> then recompile it and run.
->
-> // load this topic in rviz
->
-> /kinect_data/obstacles_location
->
-> // WARN visualization is TIME CONSUMING 
->
-> */
->
-> 
+Visualization. 
 
-#### Basic Algorithm:
+change source file "kinect_pcl.cpp" line 34 ---> visulization=true
+
+then recompile it and run.
+
+load this topic in rviz `/kinect_data/obstacles_location`
+
+WARN visualization is TIME CONSUMING 
+
+
+
+### Basic Algorithm:
 
 ![](demonstration/1.png)
 
