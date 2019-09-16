@@ -4,9 +4,7 @@
 
 Kinect 1.0, Ubuntu 16.04, ROS kinetic, PCL library
 
-
-
-
+ 
 
 ### Install:
 
@@ -16,25 +14,19 @@ For the use of kinect
 >
 > sudo apt-get install ros-<rosdistro>-openni-launch
 
-
-
-
+ 
 
 ### Launch & Use:
 
 > roslaunch openni_launch openni.launch depth_registration:=true
 
-
-
-
+ 
 
 If visualization needed
 
 > rviz
 
- 
-
-
+  
 
 Run object detection and acquire obstacles location
 
@@ -42,9 +34,7 @@ Run object detection and acquire obstacles location
 >
 > rostopic echo /kinect_data/obstacles_location
 
- 
-
-
+  
 
 msg "LocationArray" definition: 
 
@@ -53,9 +43,7 @@ msg "LocationArray" definition:
 > int length(object numbers) 
 >
 
- 
-
-
+  
 
 Visualization. 
 
@@ -67,9 +55,7 @@ load this topic in rviz `/kinect_data/obstacles_location`
 
 WARN visualization is TIME CONSUMING 
 
-
-
-
+ 
 
 ### Basic Algorithm:
 
