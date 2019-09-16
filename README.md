@@ -34,18 +34,9 @@ Run object detection and acquire obstacles location
 >
 > rostopic echo /kinect_data/obstacles_location
 
-  
 
-msg "LocationArray" definition: 
 
-> kinect_data::Location   x(x-dimension, smallest), y(DEPTH, smallest), width(x span), height(y span)
->
-> int length(object numbers) 
->
-
-  
-
-Visualization. 
+Visualization
 
 change source file "kinect_pcl.cpp" line 34 ---> visulization=true
 
